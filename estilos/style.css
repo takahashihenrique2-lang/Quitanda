@@ -9,15 +9,17 @@
     --verdecomplementar: #00b31e;
     --verdealternativo: #1f641c;
     --pretotexto: #000000;
-    --cremefundo: hsl(35, 62%, 92%);
+    --cremefundo: hsl(36, 70%, 84%);
     --fundo: #694112d7;
+    --fundoescuro:#3d2100ee;
     --branco: #ffffff;
     --marromcomplementar: #5c320f;
     --botoes: #999898;
+    --botoesclaro: #bebdbd;
 }
 
 body{
-    background-color: var(--branco);
+    background-color: var(--cremefundo);
 }
 
 header{
@@ -26,6 +28,7 @@ header{
     padding: 20px;
     display: grid;
     grid-template-columns: 80% 20%;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.568);
 }
 
 header h1{
@@ -43,7 +46,7 @@ header nav{
     border-radius: 8px;
     height: 50px;
     border: 3px solid  #2c2b2b;
-    box-shadow: 2px 2px 2px ;
+    box-shadow: 2px 2px 5px #000000bd ;
 }
 
 header nav a {
@@ -57,9 +60,10 @@ section#principal{
     grid-template-columns: 10px 50% 40% 10px;
     margin-top: 10px;
     padding: 40px 0;
-    background-color: var(--fundo);
+    background-image: linear-gradient(to right, var(--fundo), var(--fundoescuro) 60%);
     margin: 20px 10px;
     border-radius: 8px;
+    box-shadow: 3px 3px 5px #070707b2;
 }
 
 section#principal h1{
@@ -80,4 +84,38 @@ section#principal img{
     width: 200px;
     border: 5px solid #ffffff;
     outline: 5px solid var(--verdecomplementar);
+}
+
+section#botoes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+section#botoes a{
+    background-color: var(--botoes);
+    width: 40%;
+    padding: 18px;
+    text-decoration: none;
+    color: var(--pretotexto);
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.123);
+    outline: 3px solid var(--botoes) ;
+    box-shadow: 3px 5px 5px black;
+}
+
+section#botoes a:hover{
+    background-color: var(--botoesclaro);
+    outline: 3px solid var(--botoesclaro);
+}
+
+article#dados{
+    background-image: linear-gradient(to bottom right, var(--fundo), var(--fundoescuro));
+    padding: 20px;
+    margin: 20px 10px;
+    border-radius: 8px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.637);
 }
