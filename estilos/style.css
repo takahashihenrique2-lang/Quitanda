@@ -9,7 +9,7 @@
     --verdecomplementar: #009719;
     --verdealternativo: #12680e;
     --pretotexto: #000000;
-    --cremefundo: hsl(36, 71%, 73%);
+    --cremefundo: hsla(36, 96%, 68%, 0.658);
     --fundo: #694112d7;
     --fundoescuro:#3d2100ee;
     --branco: #ffffff;
@@ -115,23 +115,47 @@ section#botoes a:hover{
     outline: 3px solid var(--botoesclaro);
 }
 
+h1.subtitulos{
+    margin: 20px 20px 0px 20px;
+    font-size: 4em;
+    color: var(--verdeprincipal);
+    text-shadow: 4px 2px 3px rgba(0, 0, 0, 0.712);
+}
+
 article#dados{
     background-image: linear-gradient(to bottom right, var(--fundo), var(--fundoescuro));
-    padding: 20px;
-    margin: 20px 10px;
+    
+    margin: 8px 10px;
     border-radius: 8px;
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.637);
 }
 
 article#dados h1{
+    background-image: linear-gradient(to bottom, var(--fundoescuro), var(--fundo));
     font-size: 2.5em;
+    padding: 20px;
+    padding-bottom: 30px;
+    border-radius: 8px ;
 }
 
-article h2.dado{
-    margin-top: 10px;
-    font-weight: bolder
+article div.dado{
+    padding: 8px;
+    border-left: 8px solid var(--verdeprincipal);
+    transition: border-width 0.5s, border-color 0.5s;
+    border-radius: 8px ;
+}
+
+article div.dado:hover{
+    border-left-width: 18px;
+    border-color: var(--verdeprincipal);
 }
 
 article p.dado{
 
+}
+
+section#fotos{
+    display: flex;
+    background-color: #009719;
+    padding: 20px;
 }
