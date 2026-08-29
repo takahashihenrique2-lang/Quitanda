@@ -6,10 +6,10 @@
 
 :root{
     --verdeprincipal: #005a1b; 
-    --verdecomplementar: #00b31e;
-    --verdealternativo: #1f641c;
+    --verdecomplementar: #009719;
+    --verdealternativo: #12680e;
     --pretotexto: #000000;
-    --cremefundo: hsl(36, 70%, 84%);
+    --cremefundo: hsl(36, 71%, 73%);
     --fundo: #694112d7;
     --fundoescuro:#3d2100ee;
     --branco: #ffffff;
@@ -75,6 +75,7 @@ section#principal h1{
     color: var(--verdeprincipal);
     text-shadow: 4px 2px 3px rgba(0, 0, 0, 0.712);
     line-height: 0.85;
+   
 }
 
 section#principal img{
@@ -83,7 +84,9 @@ section#principal img{
     height: 200px;
     width: 200px;
     border: 5px solid #ffffff;
-    outline: 5px solid var(--verdecomplementar);
+    outline: 5px solid var(--verdealternativo);
+    box-shadow: 0px 0px 50px rgb(248, 248, 248);
+    box-shadow: 0px 0px 30px rgba(66, 172, 4, 0.849);
 }
 
 section#botoes {
@@ -118,4 +121,17 @@ article#dados{
     margin: 20px 10px;
     border-radius: 8px;
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.637);
+}
+
+article#dados h1{
+    font-size: 2.5em;
+}
+
+article h2.dado{
+    margin-top: 10px;
+    font-weight: bolder
+}
+
+article p.dado{
+
 }
