@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cheiro Verde | Mercearia em Avenida José Lopes Peres, 369</title>
+  <meta name="description" content="Mercearia Cheiro Verde: frutas, verduras e legumes escolhidos um a um, mercearia completa e atendimento de vizinho. Aberta todos os dias na Avenida José Lopes Peres, 369.">
+
+  <!-- Open Graph: como o link aparece quando compartilhado no WhatsApp/redes -->
+  <!-- TROCAR: idealmente uma foto real da fachada ou do hortifruti, formato paisagem (1200x630) -->
+  <meta property="og:title" content="Cheiro Verde — Mercearia">
+  <meta property="og:description" content="Frutas e verduras escolhidas uma a uma, mercearia completa e atendimento de vizinho.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1757627550652-30788bfce978?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Baloo 2: mesma família redonda e maciça da pintura do letreiro da loja -->
+  <!-- Nunito Sans: texto corrido, legível e com o mesmo espírito acolhedor -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!--
+    IMAGENS PROVISÓRIAS — 7 no total, todas marcadas com "TROCAR" no código:
+    1. og:image (no <head>)         — capa ao compartilhar o link
+    2. hero__figure                  — foto grande da direita, primeira coisa que aparece
+    3 e 4. sobre__fotos (2 fotos)     — ao lado do texto "A mercearia do seu bairro"
+    5, 6 e 7. galeria (3 fotos)       — seção "O que você encontra por aqui"
+    Basta trocar o valor de src="..." pelo caminho da foto real (ex: "fotos/fachada.jpg")
+    e ajustar o alt="..." pra descrever a foto nova.
+  -->
+
+  <!-- BARRA FIXA: nome + WhatsApp sempre visíveis, como pedido -->
+  <header class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <a href="#topo" class="topbar__brand">Cheiro Verde</a>
+
+      <nav class="topbar__nav" id="menu" data-open="false">
+        <a href="#sobre" class="topbar__link">A mercearia</a>
+        <a href="#fotos" class="topbar__link">Nossos produtos</a>
+        <a href="#contato" class="topbar__link">Endereço e horário</a>
+        <a
+          class="topbar__whats topbar__whats--menu"
+          href="https://wa.me/5518997462020?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20falar"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg viewBox="0 0 24 24" class="icon-whats" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.5-.17-.01-.37-.01-.57-.01s-.52.07-.8.37c-.27.3-1.04 1.02-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.35.19 1.86.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35z"/><path d="M12.02 2C6.5 2 2 6.48 2 12c0 1.85.51 3.65 1.47 5.22L2 22l4.9-1.44A9.96 9.96 0 0 0 12.02 22C17.55 22 22 17.52 22 12S17.55 2 12.02 2Zm0 18.13c-1.7 0-3.36-.46-4.8-1.32l-.34-.2-2.9.85.86-2.83-.22-.35a8.1 8.1 0 0 1-1.24-4.28c0-4.5 3.66-8.15 8.16-8.15 4.49 0 8.15 3.65 8.15 8.15 0 4.5-3.66 8.13-8.15 8.13Z"/></svg>
+          <span>(18) 99746-2020</span>
+        </a>
+      </nav>
+
+      <button class="topbar__toggle" id="menuToggle" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a
+        class="topbar__whats topbar__whats--bar"
+        href="https://wa.me/5518997462020?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20falar"
+        target="_blank"
+        rel="noopener"
+        aria-label="Chamar a Cheiro Verde no WhatsApp"
+      >
+        <svg viewBox="0 0 24 24" class="icon-whats" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.5-.17-.01-.37-.01-.57-.01s-.52.07-.8.37c-.27.3-1.04 1.02-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.35.19 1.86.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35z"/><path d="M12.02 2C6.5 2 2 6.48 2 12c0 1.85.51 3.65 1.47 5.22L2 22l4.9-1.44A9.96 9.96 0 0 0 12.02 22C17.55 22 22 17.52 22 12S17.55 2 12.02 2Zm0 18.13c-1.7 0-3.36-.46-4.8-1.32l-.34-.2-2.9.85.86-2.83-.22-.35a8.1 8.1 0 0 1-1.24-4.28c0-4.5 3.66-8.15 8.16-8.15 4.49 0 8.15 3.65 8.15 8.15 0 4.5-3.66 8.13-8.15 8.13Z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="topo">
+
+    <!-- HERO: logo grande à esquerda / foto de hortifruti à direita, conforme pedido -->
+    <section class="hero">
+      <div class="hero__text">
+        <p class="hero__kicker">Mercearia de bairro, desde sempre por aqui</p>
+        <h1 class="hero__title">
+          Fruta bonita, verdura fresca<br>e aquele papo de sempre.
+        </h1>
+        <p class="hero__lede">
+          Nome de tempero, jeito de vizinho: aqui a gente não pega qualquer legume da caixa —
+          escolhe um a um, olhando cor e ponto, pra sua sacola sair só com o que há de melhor no dia.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="https://wa.me/5518997462020?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20falar" target="_blank" rel="noopener">
+            Chamar no WhatsApp
+          </a>
+          <a class="btn btn--ghost" href="#sobre">Conhecer a mercearia</a>
+        </div>
+      </div>
+
+      <div class="hero__figure">
+        <!-- TROCAR: foto real de hortifruti/vitrine da Cheiro Verde (formato retrato, ela ocupa toda a coluna direita) -->
+        <img
+          src="https://images.unsplash.com/photo-1757627550652-30788bfce978?auto=format&fit=crop&w=1200&q=80"
+          alt="Caixas de madeira com legumes e verduras frescas selecionadas"
+          class="hero__img"
+          width="1200" height="1500"
+        >
+        <div class="hero__dot hero__dot--1" aria-hidden="true"></div>
+        <div class="hero__dot hero__dot--2" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- SOBRE: texto à esquerda, fotos à direita -->
+    <section class="sobre" id="sobre">
+      <div class="sobre__text">
+        <h2 class="section-title">A mercearia do seu bairro</h2>
+        <p>
+          A Cheiro Verde é mercearia de cidade pequena, do jeito que cidade pequena gosta:
+          você entra e é atendido pelo nome, sem pressa. A gente não separa qualquer fruta ou
+          verdura da caixa — escolhe uma a uma, olhando cor, ponto e tamanho, porque comida
+          bonita também rende mais na cozinha.
+        </p>
+        <p>
+          Além do hortifruti fresco, temos uma boa variedade de mercearia completa pra não
+          faltar nada na sua lista. Atendimento simpático, produtos de qualidade e aquele
+          cheirinho de fruta madura logo na entrada.
+        </p>
+
+        <ul class="sobre__lista">
+          <li><strong>Seleção criteriosa</strong> — só os produtos mais bonitos do dia vão pra prateleira.</li>
+          <li><strong>Mercearia completa</strong> — do hortifruti aos itens do dia a dia, num só lugar.</li>
+          <li><strong>Atendimento de vizinho</strong> — simpático, sem pressa, do jeito de cidade pequena.</li>
+        </ul>
+      </div>
+
+      <div class="sobre__fotos">
+        <!-- TROCAR: foto real 1 — sugestão: balcão/prateleira da loja ou produtos selecionados -->
+        <img
+          src="https://images.unsplash.com/photo-1753172433718-d0c2a99443d8?auto=format&fit=crop&w=800&q=80"
+          alt="Caixas cheias de tomates maduros e vermelhos"
+          loading="lazy" width="800" height="1000"
+        >
+        <!-- TROCAR: foto real 2 — sugestão: fachada (a que você já tem) ou atendimento -->
+        <img
+          src="https://images.unsplash.com/photo-1751892094434-6b44560df151?auto=format&fit=crop&w=800&q=80"
+          alt="Verduras frescas expostas em banca de mercearia"
+          loading="lazy" width="800" height="1000"
+        >
+      </div>
+    </section>
+
+    <!-- MAIS FOTOS: galeria mais abaixo na página, como pedido -->
+    <section class="galeria" id="fotos">
+      <h2 class="section-title section-title--center">O que você encontra por aqui</h2>
+      <div class="galeria__grid">
+        <!-- TROCAR: foto real 3 — a maior da galeria; sugestão: interior da loja com corredores/produtos -->
+        <figure class="galeria__item galeria__item--grande">
+          <img
+            src="https://images.unsplash.com/photo-1758994977610-d15d54d69771?auto=format&fit=crop&w=1200&q=80"
+            alt="Banca de feira ao ar livre com plantas e produtos frescos"
+            loading="lazy" width="1200" height="900"
+          >
+        </figure>
+        <!-- TROCAR: foto real 4 -->
+        <figure class="galeria__item">
+          <img
+            src="https://images.unsplash.com/photo-1757627550652-30788bfce978?auto=format&fit=crop&w=800&q=80"
+            alt="Legumes selecionados em caixas de madeira"
+            loading="lazy" width="800" height="1000"
+          >
+        </figure>
+        <!-- TROCAR: foto real 5 -->
+        <figure class="galeria__item">
+          <img
+            src="https://images.unsplash.com/photo-1753172433718-d0c2a99443d8?auto=format&fit=crop&w=800&q=80"
+            alt="Tomates frescos e maduros"
+            loading="lazy" width="800" height="1000"
+          >
+        </figure>
+      </div>
+      <p class="galeria__nota">* Fotos ilustrativas — serão substituídas por fotos reais da loja.</p>
+    </section>
+
+    <!-- CONTATO: endereço, telefone, whatsapp, horário e mapa -->
+    <section class="contato" id="contato">
+      <div class="contato__inner">
+        <div class="contato__coluna">
+          <h2 class="section-title section-title--claro">Vem nos visitar</h2>
+
+          <address class="contato__item">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 12 8 12s8-6.6 8-12c0-4.4-3.6-8-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg>
+            <span>Avenida José Lopes Peres, 369</span>
+          </address>
+
+          <a class="contato__item contato__item--link" href="tel:+551836021334">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.7 5.1 6.5 6.5l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z"/></svg>
+            <span>(18) 3602-1334</span>
+          </a>
+
+          <a class="contato__item contato__item--link" href="https://wa.me/5518997462020?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20falar" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.5-.17-.01-.37-.01-.57-.01s-.52.07-.8.37c-.27.3-1.04 1.02-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.35.19 1.86.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35z"/><path d="M12.02 2C6.5 2 2 6.48 2 12c0 1.85.51 3.65 1.47 5.22L2 22l4.9-1.44A9.96 9.96 0 0 0 12.02 22C17.55 22 22 17.52 22 12S17.55 2 12.02 2Zm0 18.13c-1.7 0-3.36-.46-4.8-1.32l-.34-.2-2.9.85.86-2.83-.22-.35a8.1 8.1 0 0 1-1.24-4.28c0-4.5 3.66-8.15 8.16-8.15 4.49 0 8.15 3.65 8.15 8.15 0 4.5-3.66 8.13-8.15 8.13Z"/></svg>
+            <span>(18) 99746-2020 — falar agora</span>
+          </a>
+
+          <a class="btn btn--primary btn--grande" href="https://wa.me/5518997462020?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20falar" target="_blank" rel="noopener">
+            Chamar no WhatsApp
+          </a>
+        </div>
+
+        <div class="contato__coluna">
+          <h3 class="contato__subtitulo">Horário de funcionamento</h3>
+          <dl class="horario">
+            <div class="horario__linha">
+              <dt>Segunda a sábado</dt>
+              <dd>7h30 às 19h</dd>
+            </div>
+            <div class="horario__linha">
+              <dt>Domingos</dt>
+              <dd>7h30 às 11h30</dd>
+            </div>
+            <div class="horario__linha">
+              <dt>Feriados</dt>
+              <dd>7h30 às 12h</dd>
+            </div>
+          </dl>
+
+          <div class="contato__mapa">
+            <iframe
+              title="Mapa até a Mercearia Cheiro Verde"
+              src="https://www.google.com/maps?q=Avenida+Jos%C3%A9+Lopes+Peres+369&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Cheiro Verde — Avenida José Lopes Peres, 369</p>
+    <p class="rodape__ano"></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
