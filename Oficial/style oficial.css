@@ -33,6 +33,7 @@
   --fundo-escuro-solido: #3a1f00;
 
   /* Tipografia */
+  --fonte-marca: "Fraunces", Georgia, serif;
   --fonte-display: "Baloo 2", system-ui, sans-serif;
   --fonte-texto: "Nunito Sans", system-ui, sans-serif;
 
@@ -231,13 +232,27 @@ button:focus-visible {
   margin-bottom: 10px;
 }
 
+/* Nome da marca: protagonista visual do hero. Fonte serifada robusta,
+   nada de arredondado — contraste proposital com a fonte macia usada
+   na frase de efeito logo abaixo. */
+.hero__brand {
+  font-family: var(--fonte-marca);
+  font-weight: 900;
+  font-size: clamp(5rem, 25vw, 8rem);
+  line-height: 0.92;
+  color: var(--verde-principal);
+  letter-spacing: -0.01em;
+  margin-bottom: 18px;
+}
+
 .hero__title {
   font-family: var(--fonte-display);
-  font-weight: 800;
-  font-size: clamp(2rem, 8vw, 2.6rem);
-  line-height: 1.08;
-  color: var(--verde-principal);
+  font-weight: 700;
+  font-size: clamp(1.15rem, 4.2vw, 1.5rem);
+  line-height: 1.3;
+  color: var(--marrom-complementar);
   margin-bottom: 16px;
+  max-width: 34ch;
 }
 
 .hero__lede {
@@ -583,8 +598,12 @@ button:focus-visible {
     justify-content: center;
   }
 
+  .hero__brand {
+    font-size: clamp(6rem, 9vw, 10rem);
+  }
+
   .hero__title {
-    font-size: clamp(2.6rem, 4vw, 3.6rem);
+    font-size: clamp(1.3rem, 1.6vw, 1.6rem);
   }
 
   .hero__figure {
