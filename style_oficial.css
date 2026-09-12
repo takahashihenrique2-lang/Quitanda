@@ -544,9 +544,6 @@ button:focus-visible {
     grid-template-columns: 1fr 1fr;
   }
 
-  .galeria__item--grande {
-    grid-column: 1 / -1;
-  }
 }
 
 /* ============================================================
@@ -642,7 +639,7 @@ button:focus-visible {
   }
 
   .galeria__grid {
-    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   .galeria__item--grande {
